@@ -1,0 +1,26 @@
+{
+    "title": "Akhil Mekkatt",
+    "instaToken": "IGQVJYVGcxQjZAjUTQzYW0xRHAtTW9sNE5DRDc3LXVVTzVXbWtnNE1wSHVMMWI3YXY1eUY4d21FQVphRlF2cjVnNE95Y0xFUV94SFFWNUVJdVlTU0JQV2hBT0tiRXNNY0xBVmdCMExMU0FoTWdpRHhvWAZDZD",
+    "menu": [
+        {
+            "name": "About",
+            "href": "about"
+        },
+        {
+            "name": "Work",
+            "href": "work"
+        },
+        {
+            "name": "Products",
+            "href": "products"
+        },
+        {
+            "name": "Blog",
+            "href": "https://passiontocolor.wordpress.com"
+        },
+        {
+            "name": "Contact",
+            "href": "contact"
+        }
+    ]
+}
