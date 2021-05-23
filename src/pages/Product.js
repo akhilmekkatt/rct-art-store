@@ -1,10 +1,9 @@
 import React, { Suspense } from "react";
-import Button from "react-bootstrap/Button";
-import Zoom from 'react-reveal/Zoom';
+import Button from "react-bootstrap/Button"
 
 const Product = (props) => {
 
-    return (<div className="card h-100" >
+    return (<div className="card h-100 easing" >
 
         <img className="card-img-top" width="100%" src={props.item.image}></img>
         <div className="card-body p-4">

@@ -22,5 +22,15 @@
             "name": "Contact",
             "href": "contact"
         }
+    ],
+    "socialLinks": [
+        {
+            "label": "instagram",
+            "link": "https://www.instagram.com/akhilmekkatt"
+        },
+        {
+            "label": "facebook",
+            "link": "https://www.fb.com/mekkatt"
+        }
     ]
 }

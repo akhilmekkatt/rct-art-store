@@ -29,7 +29,7 @@ class ProductList extends Component {
         const { products, loading } = this.state;
 
         return (
-            <div className="container px-4 px-lg-5 my-5">
+            <div className="container px-4 px-lg-5 my-5 easing">
 
                 <div className="row">
                     <h1>Products</h1>

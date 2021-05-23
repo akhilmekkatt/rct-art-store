@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import './App.scss';
 import { useSelector } from 'react-redux';
-import Navigation from "./shared/components/Navbar";
+import Header from "./shared/components/Header";
 
 
 
@@ -21,12 +21,6 @@ function App() {
 
   const pages = [
     {
-      pageLink: "/",
-      view: Home,
-      displayName: "Home",
-      animationDelayForNavbar: 0.2,
-      showInNavbar: true
-    }, {
       pageLink: "/products",
       view: ProuctList,
       displayName: "ProuctList",
@@ -52,10 +46,11 @@ function App() {
     <Router >
       <Suspense fallback={<div className="lazy"></div>}>
         <Route render={({ location }) => (
-          <div >
-            <Navigation
+          <React.Fragment >
+            <Header
               title={configData.title}
               menu={configData.menu}
+              social={configData.socialLinks}
             />
             <Switch location={location}>
               {pages.map((page, index) => {
@@ -74,7 +69,7 @@ function App() {
               })}
               <Redirect to="/" />
             </Switch>
-          </div>
+          </React.Fragment>
         )} />
       </Suspense>
     </Router>);

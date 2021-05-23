@@ -9,7 +9,7 @@ const HomePageComponent = () => {
         <Jumbotron
             fluid
             id="home"
-            className="  d-flex align-content-center  align-items-center justify-content-center m-0 bg-home"
+            className="d-flex align-content-center  align-items-center justify-content-center m-0 bg-home"
         >
             <div className="d-flex flex-row p-3 bg-white w-50 row-wrap">
                 <div>
