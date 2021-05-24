@@ -1,5 +1,6 @@
-import React, { Suspense, lazy } from "react";
-import './App.scss';
+import React, { Suspense, lazy, useEffect } from "react";
+import './App.theme.scss';
+import './custom.theme.scss';
 import { useSelector } from 'react-redux';
 import Header from "./shared/components/Header";
 
@@ -12,11 +13,11 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-var configData = require('./app.config.json')
+let configData = require('./app.config.json');
 const Home = lazy(() => import('./pages/Home'));
 const ProuctList = lazy(() => import('./pages/ProductList'));
-
-function App() {
+let stickHeader = false;
+const App = () => {
   const counter = useSelector(state => state.counter);
 
   const pages = [
@@ -30,24 +31,15 @@ function App() {
 
   ];
 
-  /* return (
-    <div className="App">
-      <h1>{counter}</h1>
-      <button onClick={(e) => {
-        dispatch(decrement())
-      }} >-</button>
-      <button onClick={(e) => {
-        dispatch(increment())
-      }}>+</button>
 
-    </div>
-  ); */
+
   return (
     <Router >
       <Suspense fallback={<div className="lazy"></div>}>
         <Route render={({ location }) => (
           <React.Fragment >
             <Header
+
               title={configData.title}
               menu={configData.menu}
               social={configData.socialLinks}

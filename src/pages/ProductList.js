@@ -40,7 +40,7 @@ class ProductList extends Component {
 
                     {loading ? (<label><Spinner animation="border" size="lg" /> Loading...</label>) : (
                         products.map((item, index) => {
-                            return <div className="col mb-2"><Product item={item} key={index} /></div>;
+                            return <div className="col mb-2" key={index} ><Product item={item} /></div>;
                         })
                     )}
 

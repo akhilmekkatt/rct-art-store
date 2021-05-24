@@ -1,24 +1,5 @@
-/*! `Custom` Bootstrap 4 theme */
-
-$headings-font-family:Segoe UI;
-$enable-grid-classes:false;
-$primary:#2f3c48;
-$secondary:#6f7f8c;
-$success:#3ec560;
-$danger:#cc330d;
-$info:#5c8f94;
-$warning:#6e9fa5;
-$light:#eceeec;
-$dark:#1e2b37;
-$spacer:1rem;
-$border-width:0;
-$btn-border-radius:0;
-/* @import "bootstrap";
- */
-// Add SASS theme customizations here..
-@import "~bootstrap/scss/bootstrap";
 a {
-    color: $primary;
+    
     text-decoration: none;
   }
   
@@ -60,6 +41,9 @@ body {
     align-items: center;
     z-index: 997;
     overflow-y: auto;
+    background-color: #000;
+    color: white;
+    
   }
   
   #header * {
@@ -110,3 +94,36 @@ body {
       align-items: center;
     }
   }
+
+#header.header-top {
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+#header.header-top .social-links, #header.header-top h2 {
+  display: none;
+}
+
+#header.header-top .container {
+  display: flex;
+  align-items: center;
+}
+
+#header.header-top .navbar {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #header.header-top {
+    height: 60px;
+  }
+  #header.header-top h1 {
+    font-size: 26px;
+  }
+}

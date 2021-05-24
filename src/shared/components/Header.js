@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -6,13 +6,20 @@ import Nav from 'react-bootstrap/Nav';
 const Header = (props) => {
 
     const { title, menu, social } = { ...props };
+    const [userText, setUserText] = useState('');;
 
-    return <header id="header">
+    useEffect(() => {
+        window.addEventListener('scroll', (e) => {
+            let stickHeader = e.target.documentElement.scrollTop > 60;
+            setUserText(stickHeader)
+        });
+    })
+
+    return <header id="header" className={userText ? 'header-top' : 'header'}>
         <div className="container">
             <h1><a href="/">{title}</a></h1>
             <h2>I'm an <span>Artist</span> from India</h2>
-            <Navbar variant="light" >
-
+            <Navbar variant="dark" >
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -21,7 +28,6 @@ const Header = (props) => {
                             return <Nav.Link key={index} href={item.href}>{item.name}</Nav.Link>
                         })}
                     </Nav>
-
                 </Navbar.Collapse>
             </Navbar>
             {/* <div>
