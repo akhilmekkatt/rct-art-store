@@ -1,6 +1,6 @@
 a {
     
-    text-decoration: none;
+    text-decoration: none !important;
   }
   
   a:hover {
@@ -88,7 +88,7 @@ body {
     #header .social-links {
       margin-top: 15px;
     }
-    #header ._container {
+    #header .container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -139,12 +139,16 @@ body {
   color: white;
   backdrop-filter: saturate(180%) blur(20px);
 }
+#header.header-top h1 {
+  margin-right: auto;
+  font-size: 36px;
+}
 
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
 }
 
-#header.header-top ._container {
+#header.header-top .container {
   display: flex;
   align-items: center;
 }

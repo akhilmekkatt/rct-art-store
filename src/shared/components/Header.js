@@ -11,13 +11,13 @@ const Header = (props) => {
 
     useEffect(() => {
         window.addEventListener('scroll', (e) => {
-            let stickHeader = e.target.documentElement.scrollTop > 60;
+            let stickHeader = e.target.documentElement.scrollTop > 50;
             setUserText(stickHeader)
         });
     })
 
     return <header id="header" className={userText ? 'header-top' : 'header'}>
-        <div className="_container px-lg-5">
+        <Container className="px-lg-5">
             <h1><a href="/">{title}</a></h1>
             <h2>I'm an <span>Artist</span> from India</h2>
             <Navbar variant="dark" className="mr-auto" expand="lg">
@@ -36,7 +36,7 @@ const Header = (props) => {
                     return <a key={index} href={item.link} className={'px-2 fa fa-' + item.label}>{item.label}</a>
                 })}
             </div> */}
-        </div>
+        </Container>
     </header>
 
 }
