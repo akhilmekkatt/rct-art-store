@@ -14,7 +14,7 @@ import {
   Redirect
 } from "react-router-dom";
 let configData = require('./app.config.json');
-const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
 const ProuctList = lazy(() => import('./pages/ProductList'));
 let stickHeader = false;
 const App = () => {
@@ -25,6 +25,12 @@ const App = () => {
       pageLink: "/products",
       view: ProuctList,
       displayName: "ProuctList",
+      animationDelayForNavbar: 0.2,
+      showInNavbar: true
+    }, {
+      pageLink: "/about",
+      view: About,
+      displayName: "About",
       animationDelayForNavbar: 0.2,
       showInNavbar: true
     }

@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { Container, Row, Col } from 'react-bootstrap';
 
 
 const Header = (props) => {
@@ -16,10 +17,10 @@ const Header = (props) => {
     })
 
     return <header id="header" className={userText ? 'header-top' : 'header'}>
-        <div className="container">
+        <div className="_container px-lg-5">
             <h1><a href="/">{title}</a></h1>
             <h2>I'm an <span>Artist</span> from India</h2>
-            <Navbar variant="dark" >
+            <Navbar variant="dark" className="mr-auto">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

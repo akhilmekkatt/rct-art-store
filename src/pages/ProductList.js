@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Spinner from 'react-bootstrap/Spinner'
 import Product from './Product';
-
+import { Container, Row, Col } from 'react-bootstrap';
 
 
 class ProductList extends Component {
@@ -29,25 +29,23 @@ class ProductList extends Component {
         const { products, loading } = this.state;
 
         return (
-            <div className="container px-4 px-lg-5 my-5 easing">
+            <Container className="pt-4 easing">
 
-                <div className="row">
+                <Row>
                     <h1>Products</h1>
+                </Row>
 
-                </div>
-
-                <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" >
+                <Row className="" md="3" xs="1" >
 
                     {loading ? (<label><Spinner animation="border" size="lg" /> Loading...</label>) : (
                         products.map((item, index) => {
-                            return <div className="col mb-2" key={index} ><Product item={item} /></div>;
+                            return <Col className="mb-3" key={index} ><Product item={item} /></Col>;
                         })
                     )}
 
+                </Row>
 
-                </div>
-
-            </div>
+            </Container>
         );
     }
 }

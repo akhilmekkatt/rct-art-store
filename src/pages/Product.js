@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button"
 
 const Product = (props) => {
 
-    return (<div className="card h-100 easing" >
+    return (<div className="card h-150 easing bg-white " >
 
         <img className="card-img-top" width="100%" src={props.item.image}></img>
         <div className="card-body p-4">
