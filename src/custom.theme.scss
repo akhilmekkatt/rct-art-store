@@ -19,7 +19,8 @@ body {
   
   body::before {
     content: "";
-    position: fixed;    
+    position: fixed;
+    background: #040404 url("assets/images/bg.jpg") top right no-repeat;
     background-size: cover;
     left: 0;
     right: 0;
@@ -41,7 +42,7 @@ body {
     align-items: center;
     z-index: 997;
     overflow-y: auto;
-    background-color: #000;
+    
     color: white;
     
   }
