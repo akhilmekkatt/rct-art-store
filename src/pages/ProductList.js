@@ -35,7 +35,7 @@ class ProductList extends Component {
                     <h1>Products</h1>
                 </Row>
 
-                <Row className="" md="3" xs="1" >
+                <Row className="pb-3" lg="2" md="3" xs="1" >
 
                     {loading ? (<label><Spinner animation="border" size="lg" /> Loading...</label>) : (
                         products.map((item, index) => {

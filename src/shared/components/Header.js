@@ -20,7 +20,7 @@ const Header = (props) => {
         <div className="_container px-lg-5">
             <h1><a href="/">{title}</a></h1>
             <h2>I'm an <span>Artist</span> from India</h2>
-            <Navbar variant="dark" className="mr-auto">
+            <Navbar variant="dark" className="mr-auto" expand="lg">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

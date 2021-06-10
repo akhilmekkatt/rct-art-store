@@ -12,7 +12,7 @@ a {
     transition: ease-in-out 0.3s;
 }
 body {
-    background-color: #eee;
+    background-color: #f0f0f0 !important;
     position: relative;
     
   }
@@ -92,6 +92,40 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    .navbar-toggler {
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 0;
+      transition: 0.5s;
+      position: fixed;
+      right: 15px;
+      top: 15px;
+    }
+    .navbar-collapse{
+      position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+    margin-top: 0;
+    }
+    .navbar-nav {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      bottom: 45px;
+      left: 15px;
+      padding: 10px 0;
+      overflow-y: auto;
+      transition: 0.3s;
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
   }
 
